@@ -1,0 +1,18 @@
+.divchart{
+    width: 70%;
+    position: absolute;
+    overflow-x: auto;
+}
+.divchart::-webkit-scrollbar{
+    display: none;
+}
+.log
+{
+    height: 55vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.log::-webkit-scrollbar {
+    display: none;
+}

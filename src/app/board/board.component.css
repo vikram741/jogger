@@ -1,0 +1,14 @@
+.col-xs-4
+{
+    text-align: center;
+}
+.log
+{
+    height: 55vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.log::-webkit-scrollbar {
+    display: none;
+}

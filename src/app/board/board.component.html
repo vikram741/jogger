@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-4"> <h4>Date</h4></div>
+    <div class="col-xs-4"> <h4>Distance(m)</h4></div>
+    <div class="col-xs-4"> <h4>Duration(min)</h4></div>
+</div>
+<hr style="border-width: 1px;border-color: black; padding: 0; margin: 0;" >
+<div class="log">
+<div *ngFor="let jog of jog_data" >
+    <div class="row">
+        <div class="col-xs-4"> <h5>{{jog.date.getDate()}} - {{jog.date.getMonth()}} - {{jog.date.getFullYear()}}</h5></div>
+        <div class="col-xs-4"> <h5>{{jog.distance}} </h5></div>
+        <div class="col-xs-4"> <h5>{{jog.duration}} </h5></div>    
+    </div>
+</div>
+</div>

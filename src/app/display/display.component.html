@@ -1,0 +1,12 @@
+<div class="outline">
+        <button class="btn btn-info" (click)="B_button() " >Jog-board</button> 
+        <button class="btn btn-info" (click)="S_button()">Stats</button>
+        <div class="outline2">
+            <div *ngIf="board">
+                <app-board></app-board>
+            </div>
+            <div *ngIf="stat" >
+                <app-stat></app-stat>
+            </div>
+        </div>
+</div>

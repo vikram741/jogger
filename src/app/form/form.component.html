@@ -1,0 +1,46 @@
+<div class="outline">
+    <div style="margin-left: 17px;">
+        <h4>Enter your jog info..</h4>
+    </div>
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+            <form #jogForm="ngForm" novalidate   >
+                <div class="form-group">
+                    <label for="distance">  Distance : </label>
+                    <input  required #distance="ngModel" ngModel
+                     type="number" class="form-control" id="distance" name="distance" placeholder="in Meters" min="1" >
+                     <div *ngIf="distance.invalid && ( distance.touched)" class="text-danger">
+                        <div *ngIf="distance.errors.required" > 
+                          <small>*distance is required</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="duration">  Duration : </label>
+                    <input  required #duration="ngModel" ngModel
+                     type="number" class="form-control" name="duration" placeholder="in Minutes" min="1" >
+                     <div *ngIf="duration.invalid && ( duration.touched)" class="text-danger">
+                        <div *ngIf="duration.errors.required" > 
+                          <small>*duration is required</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputdate">  Date : </label>
+                    <input ngModel required #date="ngModel"               
+                     type="date" class="form-control" name="date"   >
+                     <div *ngIf="date.invalid && ( date.touched)" class="text-danger">
+                        <div *ngIf="date.errors.required" > 
+                          <small>*date is required</small>
+                        </div>
+                    </div>
+                </div>
+            <div style="text-align: center;">
+                <button    type="submit" [disabled]="jogForm.form.invalid" class="btn btn-primary" (click)="submit(jogForm)"  >Submit</button>
+            </div>    
+            </form>
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+</div>
